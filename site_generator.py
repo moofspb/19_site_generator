@@ -39,29 +39,41 @@ def render_template(template_path, context):
     path, filename = os.path.split(template_path)
     env = Environment(
         loader=FileSystemLoader(path or './'),
-        auto_reload=True
+        auto_reload=True,
+        trim_blocks=True,
+        lstrip_blocks=True,
     )
     template = env.get_template(filename)
     return template.render(context)
 
 
-def write_generated_page(template):
-    with open('site/index.html', 'w') as f:
+def write_generated_page(filepath, template):
+    with open(filepath, 'w') as f:
         f.write(template)
 
 
 # print(get_titles(load_config('config.json')))
 topics = get_titles(load_config('config.json'))
 articles = get_articles(load_config('config.json'))
+html_from_md = markdown_to_html(load_markdown('articles/0_tutorial/8_cli.md'))
 context = {
     'topics': topics,
-    'articles': articles
+    'articles': articles,
+    'article': html_from_md
 }
 
 create_dir_for_html('site')
-write_generated_page(render_template('templates/main.html', context))
+# write_generated_page('site/index.html', (render_template('templates/main.html', context)))
 # print(load_config('config.json'))
-# print(markdown_to_html(load_markdown('articles/0_tutorial/8_cli.md')))
+
+html_template = render_template('templates/article.html', context)
+
+write_generated_page('site/8_cli.html', html_template)
+
+# html_article = markdown_to_html(load_markdown('articles/0_tutorial/8_cli.md'))
+# write_generated_page('site/8_cli.html', html_article)
+
+
 """
 TODO:
 make main page template (main.html)
