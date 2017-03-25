@@ -35,6 +35,11 @@ def markdown_to_html(md_data):
     return markdown.markdown(md_data)
 
 
+def get_html_article_path(article):
+    article_path = os.path.splitext(article['source'])[0]
+    return '{}.html'.format(article_path)
+
+
 def render_template(template_path, context):
     path, filename = os.path.split(template_path)
     env = Environment(
@@ -73,12 +78,3 @@ write_generated_page('site/8_cli.html', html_template)
 # html_article = markdown_to_html(load_markdown('articles/0_tutorial/8_cli.md'))
 # write_generated_page('site/8_cli.html', html_article)
 
-
-"""
-TODO:
-make main page template (main.html)
-make article page template
-
-In site_generator.py:
-function "
-"""
