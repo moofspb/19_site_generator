@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../static/favicons/favicon.png">
 
-    <title>Devman's Wiki</title>
+    <title>Специальный символ &amp;</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -33,36 +33,9 @@
   </head>
 
   <body>
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Энциклопедия</h1>
-        <p>Это энциклопедия сайта <a href="http://devman.org">devman.org</a>. Здесь вы найдете много полезных статей,
-        посвященных программированию на языке Python.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        {% for topic in config['topics'] %}
-        <div class="col-md-3">
-          <h2>{{ topic['title'] }}</h2>
-          {% for article in config['articles'] %}
-          {% if article['topic'] == topic['slug'] %}
-            <p><a href="{{ article['source']|e }}">{{ article['title']|e }}</a></p>
-          {% endif %}
-          {% endfor %}
-        </div>
-        {% endfor %}
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2017 devman.org</p>
-      </footer>
-    </div>
-
+    <h1>Специальный символ &amp;</h1>
+    <h1>Специальные символы в HTML</h1>
+<p>TODO. Здесь будет большая статья про использование специальных символов в HTML. Например, про &gt; и &amp;. Также стоит затронуть необходимость экранирования текста при генерации HTML.</p>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

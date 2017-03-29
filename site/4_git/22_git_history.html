@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../static/favicons/favicon.png">
 
-    <title>Devman's Wiki</title>
+    <title>История</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -33,36 +33,16 @@
   </head>
 
   <body>
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Энциклопедия</h1>
-        <p>Это энциклопедия сайта <a href="http://devman.org">devman.org</a>. Здесь вы найдете много полезных статей,
-        посвященных программированию на языке Python.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        {% for topic in config['topics'] %}
-        <div class="col-md-3">
-          <h2>{{ topic['title'] }}</h2>
-          {% for article in config['articles'] %}
-          {% if article['topic'] == topic['slug'] %}
-            <p><a href="{{ article['source']|e }}">{{ article['title']|e }}</a></p>
-          {% endif %}
-          {% endfor %}
-        </div>
-        {% endfor %}
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2017 devman.org</p>
-      </footer>
-    </div>
-
+    <h1>История</h1>
+    <p>История изменений в коде очень важна при работе в команде. По ней программисты ориентируются.</p>
+<p>Такие емкие комментарии как "исправлено", "обновлено", "сделано" не только бесполезны, но
+они заставляют вычитывать код чтобы разобраться в смысле изменений внесенных кем-то другим. 
+Это время и нервы помноженные на размер команды. Не делай так!</p>
+<p>Вот тут написано как надо делать:</p>
+<ul>
+<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">A Note About Git Commit Messages</a> (en)</li>
+<li><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a> (en)</li>
+</ul>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

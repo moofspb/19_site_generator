@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../static/favicons/favicon.png">
 
-    <title>Devman's Wiki</title>
+    <title>Взлом с помощью </body></title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -33,36 +33,9 @@
   </head>
 
   <body>
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Энциклопедия</h1>
-        <p>Это энциклопедия сайта <a href="http://devman.org">devman.org</a>. Здесь вы найдете много полезных статей,
-        посвященных программированию на языке Python.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        {% for topic in config['topics'] %}
-        <div class="col-md-3">
-          <h2>{{ topic['title'] }}</h2>
-          {% for article in config['articles'] %}
-          {% if article['topic'] == topic['slug'] %}
-            <p><a href="{{ article['source']|e }}">{{ article['title']|e }}</a></p>
-          {% endif %}
-          {% endfor %}
-        </div>
-        {% endfor %}
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2017 devman.org</p>
-      </footer>
-    </div>
-
+    <h1>Взлом с помощью </body></h1>
+    <h1>HTML Injection with <code>body</code> Tag Closing</h1>
+<p>Здесь будет статья о том почему важно экранировать user-generated контекст, как неосторожность приводит к взлому сайта роботами.</p>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

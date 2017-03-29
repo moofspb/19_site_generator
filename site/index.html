@@ -44,16 +44,35 @@
 
     <div class="container">
       <div class="row">
-        {% for topic in config['topics'] %}
         <div class="col-md-3">
-          <h2>{{ topic['title'] }}</h2>
-          {% for article in config['articles'] %}
-          {% if article['topic'] == topic['slug'] %}
-            <p><a href="{{ article['source']|e }}">{{ article['title']|e }}</a></p>
-          {% endif %}
-          {% endfor %}
+          <h2>Арсенал</h2>
+            <p><a href="0_tutorial/14_google.html">Гугл</a></p>
+            <p><a href="0_tutorial/27_devman.html">Девман</a></p>
+            <p><a href="0_tutorial/29_english.html">Английский</a></p>
+            <p><a href="0_tutorial/7_codenvy.html">Кодэнви</a></p>
+            <p><a href="0_tutorial/8_cli.html">Консоль</a></p>
+            <p><a href="0_tutorial/9_git.html">Гит и Гитхаб</a></p>
         </div>
-        {% endfor %}
+        <div class="col-md-3">
+          <h2>Основы Питона</h2>
+            <p><a href="1_python_basics/10_pep8.html">Стайлгайд</a></p>
+            <p><a href="1_python_basics/18_comments.html">Комментарии</a></p>
+            <p><a href="1_python_basics/1_intro.html">Зачем нужен Питон</a></p>
+            <p><a href="1_python_basics/2_base_types.html">Основные типы данных</a></p>
+            <p><a href="1_python_basics/3_base_constructions.html">Основные конструкции</a></p>
+            <p><a href="1_python_basics/4_types.html">Типы данных</a></p>
+            <p><a href="1_python_basics/5_modules.html">Модули</a></p>
+            <p><a href="1_python_basics/6_tips_and_tricks.html">Полезные приёмы</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>HTML</h2>
+            <p><a href="2_html/special &amp;amp; symbol.html">Специальный символ &amp;amp;</a></p>
+            <p><a href="2_html/html_injection.html">Взлом с помощью &lt;/body&gt;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>Гит</h2>
+            <p><a href="4_git/22_git_history.html">История</a></p>
+        </div>
       </div>
 
       <hr>
