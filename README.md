@@ -1,7 +1,18 @@
-# Encyclopedia
+# Site generator
 
-[TODO. There will be project description]
+This script generates encyclopedia site using given markdown articles
+ and config.json where articles structure is stored.
 
-# Project Goals
+# Requirements
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Install requirements running `pip install -r requirements.txt`
+
+# Usage
+
+Run the script from a command line:
+
+`python3 site_generator.py`
+
+# Example
+
+Check script result on [GitHub Pages](https://moofspb.github.io/19_site_generator/)
